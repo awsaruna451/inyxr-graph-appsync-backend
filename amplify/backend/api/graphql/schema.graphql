@@ -1,0 +1,45 @@
+type Comment {
+  id: ID!
+  text: String!
+  addedBy: String
+  dateTime: String
+  commentId: String
+  ideaId: String
+}
+
+type Reply {
+  id: ID!
+  text: String!
+  addedBy: String
+  dateTime: String
+  commentId: ID!
+  ideaId: String
+}
+
+input CreateCommentInput {
+  id: ID!
+  text: String!
+  addedBy: String
+  dateTime: String
+  ideaId: String
+}
+
+input CreateReplyInput {
+  id: ID!
+  text: String!
+  addedBy: String
+  dateTime: String
+  commentId: ID!
+  ideaId: String
+}
+
+type Query {
+  getComments: [Comment]
+  getReplies: [Reply]
+  getCommentsByIdeaId(ideaId: String!): [Comment]
+}
+
+type Mutation {
+  createComment(input: CreateCommentInput): Comment
+  createReply(input: CreateReplyInput): Reply
+}

@@ -1,0 +1,20 @@
+{
+  "name": "nyxr-graph-appsync-backend",
+  "version": "1.0.0",
+  "description": "Backend module for nyxr GraphQL AppSync application using Amplify and DynamoDB.",
+  "main": "index.js",
+  "scripts": {
+    "start": "amplify mock api",
+    "deploy": "amplify push",
+    "build": "amplify build"
+  },
+  "dependencies": {
+    "aws-amplify": "^4.3.0",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
