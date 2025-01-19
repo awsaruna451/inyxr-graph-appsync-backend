@@ -1,4 +1,4 @@
-name: Deploy nyxr-graph-appsync-backend
+name: Deploy  nyxr-graph-appsync-backend
 
 on:
   push:
